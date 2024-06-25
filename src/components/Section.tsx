@@ -6,7 +6,7 @@ import propTypes from 'prop-types';
  * @returns {React.ReactNode} Page's section component
  */
 export default function Section(
-  { title, children }: { title: string, children: React.ReactNode }
+  { title, children }: Props
 ) {
 
   return (
@@ -16,7 +16,8 @@ export default function Section(
     </section>
   )
 }
-Section.proptTypes = {
-  title: propTypes.string.isRequired,
-  children: propTypes.node,
+
+interface Props {
+  title: string,
+  children: React.ReactNode,
 }

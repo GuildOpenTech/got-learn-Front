@@ -9,7 +9,7 @@ import { Box } from '@mui/material';
  * Display the layout of the page
  * @returns {React.ReactNode} Layout component
  */
-export default function Layout() {
+export default function Layout({} : Props) {
 
   return (
     <>
@@ -86,6 +86,7 @@ export default function Layout() {
 
   )
 }
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+
+interface Props {
+  children: React.ReactNode,
 }
