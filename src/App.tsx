@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Button from "@mui/material/Button";
-import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import { theme } from "./core/theme";
 import Layout from "./views/Layout";
+import { ThemeProvider } from "@mui/material";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -13,8 +13,6 @@ function App() {
         <Layout>
           <h1>titre</h1>
         </Layout>
-
-
       </ThemeProvider>
     </>
   );

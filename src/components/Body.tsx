@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { Box } from '@mui/material';
 import { useEffect, useMemo, useState } from 'react';
 
-export default function Body({ children }: { children: React.ReactNode }) {
+export default function Body({ children }: Props) {
 
   const [position, setPosition] = useState(0)
 
@@ -37,6 +37,6 @@ export default function Body({ children }: { children: React.ReactNode }) {
   )
 }
 
-Body.propTypes = {
-  children: PropTypes.node.isRequired,
+interface Props {
+  children: React.ReactNode,
 }
