@@ -30,3 +30,14 @@ section {
   max-width: 1440px;
   margin: auto;
 }
+.footer,
+.partners {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.footer-title {
+  margin-left: 30px;
+  color: #4e8dbc;
+  font-size: 22px;
+}
