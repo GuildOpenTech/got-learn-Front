@@ -11,6 +11,12 @@ const config: Config = {
     "^.+\\.svg$": "jest-transformer-svg",
   },
   setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
+  collectCoverageFrom: [
+    'src/**/*.ts', 
+    '!src/**/spec.ts',
+    'src/**/*.tsx', 
+    '!src/**/spec.tsx'
+  ],
 };
 
 export default config;
