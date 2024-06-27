@@ -15,11 +15,6 @@ export default function Footer() {
         backgroundPosition: 'right',
       }}
     >
-      <Section
-        title="section 1"
-      >
-        <p>content of section here</p>
-      </Section>
     </Box>
   )
 }
