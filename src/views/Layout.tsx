@@ -1,9 +1,9 @@
-import PropTypes from 'prop-types';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Body from '../components/Body';
 import Section from '../components/Section';
 import { Box } from '@mui/material';
+import TopSection from '../components/Sections/TopSection';
 
 /**
  * Display the layout of the page
