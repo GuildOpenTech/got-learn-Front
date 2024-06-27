@@ -15,6 +15,7 @@ export default function Footer() {
         backgroundPosition: 'right',
       }}
     >
+      Content
     </Box>
   )
 }
