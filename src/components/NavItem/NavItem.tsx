@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Colors } from '../../core/colors'
 
 export default function NavItem(
-  { link }: { link: { name: string, target: string } }
+  { link }: NavItemProps
 ) {
 
   const [hover, setHover] = useState(false)
@@ -59,11 +59,12 @@ export default function NavItem(
   )
 }
 
-NavItem.propTypes = {
-  link: PropTypes.shape({
-    name: PropTypes.string,
-    target: PropTypes.string,
-  }),
-  index: PropTypes.number,
+export interface NavItemLink {
+  name: string,
+  target: string,
+}
+interface NavItemProps  {
+  link: NavItemLink,
+  index?: number,
 }
 

@@ -22,6 +22,7 @@ export default function Layout({} : Props) {
           }}
         >
           <Section
+            id="1"
             title="section 1"
             
           >
@@ -35,6 +36,7 @@ export default function Layout({} : Props) {
           }}
         >
           <Section
+            id="2"
             title="section 2"
           >
             <p>content of section here</p>
@@ -67,11 +69,13 @@ export default function Layout({} : Props) {
             <p>content of section here</p>
           </Section>
           <Section
+            id="5"
             title="section 5"
           >
             <p>content of section here</p>
           </Section>
           <Section
+            id="6"
             title="section 6"
           >
             <p>content of section here</p>
