@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import { Colors } from "../../core/colors";
 import Section from "../Section";
 
-export default function Footer() {
+export default function TopSection() {
   return (
     <Box
       bgcolor={Colors.BLEU_NUIT}
@@ -15,7 +15,11 @@ export default function Footer() {
         backgroundPosition: 'right',
       }}
     >
-      Content
+      <Section
+        title="section 1"
+      >
+        <p>content of section here</p>
+      </Section>
     </Box>
   )
 }
