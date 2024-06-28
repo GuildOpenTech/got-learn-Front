@@ -1,12 +1,12 @@
 import { Box } from '@mui/material';
-import NavItem from '../NavItem/NavItem';
+import NavItem, { NavItemLink } from '../NavItem/NavItem';
 import BurgerMenu from '../BurgerMenu/BurgerMenu';
 import { Colors } from '../../core/colors';
 import './navbar.css';
 
 export default function Navbar() {
 
-  const navItems: { name: string, target: string }[] = [
+  const navItems: NavItemLink[] = [
     {
       name: 'La GOT Âme',
       target: '/#gotAme'

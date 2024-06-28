@@ -19,6 +19,6 @@ export default function Section(
 
 interface Props {
   title: string,
-  id?: string,
+  id: string,
   children: React.ReactNode,
 }
