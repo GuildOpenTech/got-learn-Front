@@ -1,9 +1,9 @@
-import PropTypes from 'prop-types';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Body from '../components/Body';
 import Section from '../components/Section';
 import { Box } from '@mui/material';
+import TopSection from '../components/Sections/TopSection';
 
 /**
  * Display the layout of the page
@@ -15,18 +15,7 @@ export default function Layout({} : Props) {
     <>
       <Header />
       <Body>
-        <Box
-          height={200}
-          sx={{
-            background: 'white'
-          }}
-        >
-          <Section
-            title="section 1"
-          >
-            <p>content of section here</p>
-          </Section>
-        </Box>
+        <TopSection/>
         <Box
           height={200}
           sx={{
