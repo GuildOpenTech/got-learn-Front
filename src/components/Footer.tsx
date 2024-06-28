@@ -22,7 +22,7 @@ export default function Footer() {
           <div className="partners">
             <img src={Github} alt="Github" />
             <img src={canvaImage} alt="canvaImage" />
-            <img src={HelloAsso} alt="HelloAsso" />
+            <img src={HelloAsso} alt="HelloAsso" width={100} />
             <img src={JeVeuxAider} alt="JeVeuxAider" />
           </div>
         </div>
