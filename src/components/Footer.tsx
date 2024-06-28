@@ -26,6 +26,7 @@ export default function Footer() {
             <img src={JeVeuxAider} alt="JeVeuxAider" />
           </div>
         </div>
+    
       </Box>
     </footer>
   );

@@ -16,6 +16,7 @@ export default function TopSection() {
     >
       <Section
         title="section 1"
+        id="topSection"
       >
         <p>content of section here</p>
       </Section>

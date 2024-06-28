@@ -24,6 +24,7 @@ export default function Layout({} : Props) {
         >
           <Section
             title="section 2"
+            id="2"
           >
             <p>content of section here</p>
           </Section>
@@ -34,7 +35,8 @@ export default function Layout({} : Props) {
           }}
         >
           <Section
-            title="section 3"
+            title="La GOT Âme"
+            id="gotAme"
           >
             <p>content of section here</p>
           </Section>
@@ -48,22 +50,26 @@ export default function Layout({} : Props) {
           }}
         >
           <Section
-            title="section 4"
+            title="Projets en cours"
+            id="projects"
           >
             <p>content of section here</p>
           </Section>
           <Section
             title="section 5"
+            id="5"
           >
             <p>content of section here</p>
           </Section>
           <Section
             title="section 6"
+            id="6"
           >
             <p>content of section here</p>
           </Section>
           <Section
-            title="section 7"
+            title="Ils racontent leur expérience"
+            id="feedbacks"
           >
             <p>content of section here</p>
           </Section>
