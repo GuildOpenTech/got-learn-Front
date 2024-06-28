@@ -7,4 +7,5 @@ export enum Colors {
     TURQUOISE="#2AB8CD",
     
     ORANGE="#F6A316"
+
 }
