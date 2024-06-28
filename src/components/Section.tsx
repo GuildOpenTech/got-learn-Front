@@ -21,7 +21,7 @@ export default function Section(
 }
 
 interface Props {
-  title: string,
+  title?: string,
   id: string,
   children: React.ReactNode,
 }
