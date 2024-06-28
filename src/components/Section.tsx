@@ -10,6 +10,9 @@ export default function Section(
   return (
     <section
       id={id}
+      style={{
+        position: 'relative',
+      }}
     >
       <h2>{title}</h2>
       {children}
