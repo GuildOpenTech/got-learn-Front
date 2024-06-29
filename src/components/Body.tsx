@@ -29,7 +29,7 @@ export default function Body({ children }: Props) {
           height: document.body.scrollHeight,
           background: `linear-gradient(to bottom, #0D2D45 ${position - 25}%, #2AB8CD ${position - 15}%, #2AB8CD ${position + 15}%, #0D2D45 ${position + 25}%)`,
           position: 'absolute',
-          top: '450px',
+          top: '410px',
           left: '114px'
         }}
       />

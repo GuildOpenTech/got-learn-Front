@@ -10,6 +10,10 @@ const router = createBrowserRouter([
         path: "/connexion",
         element: <App />,
     },
+    {
+        path: "/inscription",
+        element: <App />,
+    },
 ]);
 
 export { router };

@@ -1,5 +1,7 @@
 import { Box, Button, Typography } from "@mui/material";
+import { keyframes } from '@mui/system';
 import { Colors } from "../../core/colors";
+import { useState } from "react";
 
 export default function TopSection() {
   return (
@@ -16,6 +18,7 @@ export default function TopSection() {
       <TitleAndLogo />
       <Description />
       <CTAButton />
+      <BotImagePlaceholder />
     </Box>
   )
 }
@@ -71,7 +74,7 @@ const TitleAndLogo = () => {
         flexDirection: 'row',
         alignItems: 'center',
         gap: '59px',
-        paddingTop: '130px',
+        paddingTop: '90px',
       }}
     >
       <Box component="img" src="src/assets/logos/LOGO_TxtBlc_158px.png" />
@@ -92,21 +95,63 @@ const TitleAndLogo = () => {
 }
 
 const CTAButton = () => {
+  const shake = keyframes`
+    10%,
+    90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    20%,
+    80% {
+      transform: translate3d(2px, 0, 0);
+    }
+    30%,
+    50%,
+    70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+    40%,
+    60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  `;
+
   return (
     <Box
       sx={{
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        marginTop: '84px'
       }}
     >
       <Button
         variant="contained"
+        disableRipple
         sx={{
-          background: 'radial-gradient(170.24% 336.33% at 100% 84.88%, #0D2D45 0%, #0D2D45 38.42%, #2AB8CD 100%)',
+          background: `radial-gradient(170.24% 336.33% at 100% 84.88%, ${Colors.BLEU_OUTREMER} 0%, ${Colors.BLEU_OUTREMER} 38.42%, ${Colors.TURQUOISE} 100%)`,
+          border: '1px solid',
+          borderImageSource: `radial-gradient(170.24% 336.33% at 100% 84.88%, ${Colors.BLEU_OUTREMER} 0%, ${Colors.BLEU_OUTREMER} 38.42%, ${Colors.TURQUOISE} 100%)`,
+          width: '164px',
+          height: '73px',
+          padding: '12px 25px 12px 25px',
+          gap: '10px',
+          borderRadius: '128px',
+          boxShadow: `2px 2px 3px 0px ${Colors.LUEUR_BLEUE} inset`,
+          textTransform: 'none',
+          fontSize: '20px',
+          lineHeight: 'initial',
+          color: Colors.ORANGE,
+          opacity: '0.5',
+          textAlign: 'center',
+
+          ':hover': {
+            opacity: '1',
+            animation: `${shake} 0.82s cubic-bezier(.36, .07, .19, .97) both infinite;`,
+          },
         }}
+        href="/inscription"
       >
-        Contained
+        Viens sur <br /> Discord
       </Button>
     </Box>
 
@@ -118,8 +163,8 @@ const MarkersLine = () => {
     <Box
       sx={{
         position: 'absolute',
-        marginLeft: '175px',
-        marginTop: '16px',
+        marginLeft: '174.33px',
+        marginTop: '64px',
         width: '2.3px',
         height: '160px',
         background: 'white',
@@ -130,33 +175,70 @@ const MarkersLine = () => {
 
 const Description = () => {
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'flex-start',
-        gap: '24px',
-        marginLeft: '170px',
-        marginTop: '48px',
-      }}
-    >
-      <MarkerWithText
-        text="Participe gratuitement à des projets open source technologiquement innovants"
-      />
+    <>
+      <MarkersLine />
+      <Box
+        sx={{
+          position: 'relative',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'flex-start',
+          gap: '24px',
+          marginLeft: '170px',
+          marginTop: '48px',
+        }}
+      >
+        <MarkerWithText
+          text="Participe gratuitement à des projets open source technologiquement innovants"
+        />
 
-      <MarkerWithText
-        color={Colors.ORANGE}
-        text="Immerge toi dans la GOT Âme, inspirée par l'École 42 et notre passion pour l'IT"
-      />
+        <MarkerWithText
+          color={Colors.ORANGE}
+          text="Immerge toi dans la GOT Âme, inspirée par l'École 42 et notre passion pour l'IT"
+        />
 
-      <MarkerWithText
-        text="Expérimenté ou en reconversion, réseaute avec des experts dans leurs domaines"
-      />
+        <MarkerWithText
+          text="Expérimenté ou en reconversion, réseaute avec des experts dans leurs domaines"
+        />
 
-      <MarkerWithText
-        color={Colors.ORANGE}
-        text="Collabore avec des passionnés solidaires, acquiers de l'expérience, monte en compétences"
-      />
-    </Box>
+        <MarkerWithText
+          color={Colors.ORANGE}
+          text="Collabore avec des passionnés solidaires, acquiers de l'expérience, monte en compétences"
+        />
+      </Box>
+    </>
+  )
+}
+
+const BotImagePlaceholder = () => {
+  return (
+    <>
+      <Box
+        sx={{
+          fontSize: '134px',
+          position: 'absolute',
+          marginRight: '81px',
+          right: 0,
+          bottom: '43%',
+          rotate: '-15deg',
+        }}
+      >
+        🤖
+      </Box>
+      <Box
+        sx={{
+          fontSize: '18px',
+          position: 'absolute',
+          marginRight: '160px',
+          right: 0,
+          top: '35%',
+          color: `${Colors.ORANGE}`,
+          padding: '0 16px',
+        }}
+      >
+        Miss Terry <br/> te répond
+      </Box>
+    </>
+
   )
 }
