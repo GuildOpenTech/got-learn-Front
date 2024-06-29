@@ -9,7 +9,7 @@ export default function TopSection() {
       bgcolor={Colors.BLEU_NUIT}
       sx={{
         height: 'calc(100vh - 130px)',
-        backgroundImage: 'url("src/assets/backgrounds/Body_MeshGradient N°1.svg")',
+        backgroundImage: 'url("src/assets/backgrounds/Body_MeshGradient_1.svg")',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'right',
         paddingLeft: '38px'

@@ -10,6 +10,9 @@ export default function Section(
   return (
     <section
       id={id}
+      style={{
+        position: 'relative',
+      }}
     >
       <h2>{title}</h2>
       {children}
@@ -18,7 +21,7 @@ export default function Section(
 }
 
 interface Props {
-  title: string,
+  title?: string,
   id: string,
   children: React.ReactNode,
 }
