@@ -4,4 +4,5 @@ export enum Colors {
 
     BLEU_OUTREMER="#0D2D45",
     BLEU_NUIT="#071520",
+    ORANGE="#F6A316"
 }
