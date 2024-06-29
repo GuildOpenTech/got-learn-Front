@@ -12,7 +12,7 @@ export default function TopSection() {
         backgroundImage: 'url("src/assets/backgrounds/Body_MeshGradient_1.svg")',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'right',
-        paddingLeft: '38px'
+        paddingLeft: '8px'
       }}
     >
       <TitleAndLogo />
