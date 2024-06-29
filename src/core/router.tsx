@@ -6,6 +6,10 @@ const router = createBrowserRouter([
         path: "/",
         element: <App />,
     },
+    {
+        path: "/connexion",
+        element: <App />,
+    },
 ]);
 
 export { router };
