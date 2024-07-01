@@ -5,21 +5,19 @@ export enum Colors {
     LUEUR_BLEUE="#93D3E9",
     ORANGE="#F6A316",
 
-    // Gradients
     BUTTON_GRADIENT=`
     radial-gradient(
-        170.24% 336.33% at 100% 84.88%, 
-        ${BLEU_OUTREMER} 0%, 
-        ${BLEU_OUTREMER} 38.42%, 
-        ${TURQUOISE} 100%
+        40% 80% at 0% 0%, 
+        ${TURQUOISE} 0.01%,
+        ${BLEU_OUTREMER} 100%
     )`,
     BUTTON_GRADIENT_OPACITY_50=`
     radial-gradient(
-        170.24% 336.33% at 100% 84.88%, 
-        color-mix(in srgb, ${BLEU_OUTREMER}, transparent 50%) 0%, 
-        color-mix(in srgb, ${BLEU_OUTREMER}, transparent 50%) 38.42%, 
-        color-mix(in srgb, ${TURQUOISE}, transparent 50%) 100%
+        40% 80% at 0% 0%, 
+        color-mix(in srgb, ${TURQUOISE}, transparent 50%) 0.01%,
+        color-mix(in srgb, ${BLEU_OUTREMER}, transparent 50%) 100%
     )`,
+
 
     // Theme
     PRIMARY= BLEU_OUTREMER,

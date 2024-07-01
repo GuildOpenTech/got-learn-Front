@@ -23,7 +23,13 @@ export default function CTAButton(props: CTAButtonProps) {
         color: Colors.ORANGE,
         ':hover': {
           animation: `${SHAKE} 0.82s cubic-bezier(.36, .07, .19, .97) both infinite;`,
-          boxShadow: `2px 2px 3px 0px ${Colors.LUEUR_BLEUE} inset`,
+          boxShadow: `
+          0 0 8px ${Colors.LUEUR_BLEUE},
+          inset 0 0 8px ${Colors.LUEUR_BLEUE},
+          0 0 16px ${Colors.TURQUOISE},
+          inset 0 0 16px ${Colors.TURQUOISE},
+          0 0 32px ${Colors.TURQUOISE},
+          inset 0 0 32px ${Colors.TURQUOISE} `,
           background: Colors.BUTTON_GRADIENT,
         },
 
