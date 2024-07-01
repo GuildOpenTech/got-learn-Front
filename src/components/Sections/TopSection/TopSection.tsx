@@ -1,7 +1,6 @@
 import { Box, Button, Typography } from "@mui/material";
-import { keyframes } from '@mui/system';
-import { Colors } from "../../core/colors";
-import { useState } from "react";
+import { Colors } from "../../../core/colors";
+import { SHAKE } from "../../../core/animations";
 
 export default function TopSection() {
   return (
@@ -95,26 +94,6 @@ const TitleAndLogo = () => {
 }
 
 const CTAButton = () => {
-  const shake = keyframes`
-    10%,
-    90% {
-      transform: translate3d(-1px, 0, 0);
-    }
-    20%,
-    80% {
-      transform: translate3d(2px, 0, 0);
-    }
-    30%,
-    50%,
-    70% {
-      transform: translate3d(-4px, 0, 0);
-    }
-    40%,
-    60% {
-      transform: translate3d(4px, 0, 0);
-    }
-  `;
-
   return (
     <Box
       sx={{
@@ -125,6 +104,7 @@ const CTAButton = () => {
       }}
     >
       <Button
+        data-testid="ctaButton"
         variant="contained"
         disableRipple
         sx={{
@@ -146,7 +126,7 @@ const CTAButton = () => {
 
           ':hover': {
             opacity: '1',
-            animation: `${shake} 0.82s cubic-bezier(.36, .07, .19, .97) both infinite;`,
+            animation: `${SHAKE} 0.82s cubic-bezier(.36, .07, .19, .97) both infinite;`,
           },
         }}
         href="/inscription"

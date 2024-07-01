@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import Body from '../components/Body';
 import Section from '../components/Section';
 import { Box } from '@mui/material';
-import TopSection from '../components/Sections/TopSection';
+import TopSection from '../components/Sections/TopSection/TopSection';
 import { Colors } from '../core/colors';
 
 /**
