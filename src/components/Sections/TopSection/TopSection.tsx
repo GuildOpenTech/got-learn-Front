@@ -1,6 +1,7 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { Colors } from "../../../core/colors";
-import { SHAKE } from "../../../core/animations";
+import CTAButton from "../../../core/ui/CTAButton";
+import Marker from "../../../core/ui/Marker";
 
 export default function TopSection() {
   return (
@@ -16,32 +17,11 @@ export default function TopSection() {
     >
       <TitleAndLogo />
       <Description />
-      <CTAButton />
+      <RegisterButton />
       <BotImagePlaceholder />
     </Box>
   )
 }
-
-const Marker = (props: MarkerProps) => {
-  return (
-    <Box
-      width={props.sizePx ?? '11px'}
-      height={props.sizePx ?? '11px'}
-      sx={{
-        borderRadius: '50%',
-        background: Colors.BLEU_NUIT,
-        border: `${props.borderSize ?? '1mm'} solid ${props.color ?? 'white'}`,
-      }}
-    />
-  )
-}
-
-interface MarkerProps {
-  sizePx?: number;
-  borderSize?: string;
-  color?: string;
-}
-
 
 interface MarkerWithTextProps {
   color?: string;
@@ -93,7 +73,7 @@ const TitleAndLogo = () => {
   )
 }
 
-const CTAButton = () => {
+const RegisterButton = () => {
   return (
     <Box
       sx={{
@@ -103,36 +83,9 @@ const CTAButton = () => {
         marginTop: '84px'
       }}
     >
-      <Button
-        data-testid="ctaButton"
-        variant="contained"
-        disableRipple
-        sx={{
-          background: `radial-gradient(170.24% 336.33% at 100% 84.88%, ${Colors.BLEU_OUTREMER} 0%, ${Colors.BLEU_OUTREMER} 38.42%, ${Colors.TURQUOISE} 100%)`,
-          border: '1px solid',
-          borderImageSource: `radial-gradient(170.24% 336.33% at 100% 84.88%, ${Colors.BLEU_OUTREMER} 0%, ${Colors.BLEU_OUTREMER} 38.42%, ${Colors.TURQUOISE} 100%)`,
-          width: '164px',
-          height: '73px',
-          padding: '12px 25px 12px 25px',
-          gap: '10px',
-          borderRadius: '128px',
-          boxShadow: `2px 2px 3px 0px ${Colors.LUEUR_BLEUE} inset`,
-          textTransform: 'none',
-          fontSize: '20px',
-          lineHeight: 'initial',
-          color: Colors.ORANGE,
-          opacity: '0.5',
-          textAlign: 'center',
-
-          ':hover': {
-            opacity: '1',
-            animation: `${SHAKE} 0.82s cubic-bezier(.36, .07, .19, .97) both infinite;`,
-          },
-        }}
-        href="/inscription"
-      >
+      <CTAButton href="/inscription">
         Viens sur <br /> Discord
-      </Button>
+      </CTAButton>
     </Box>
 
   )
