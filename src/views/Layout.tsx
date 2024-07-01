@@ -3,8 +3,8 @@ import Header from "../components/Header";
 import Body from "../components/Body";
 import Section from "../components/Section";
 import { Box } from "@mui/material";
-import TopSection from "../components/Sections/TopSection";
-import GotAme from "../components/Sections/GotAme/GotAme";
+import TopSection from "../components/Sections/TopSection/TopSection";
+import { Colors } from "../core/colors";
 
 /**
  * Display the layout of the page
@@ -16,25 +16,38 @@ export default function Layout({}: Props) {
       <Header />
       <Body>
         <TopSection />
-        <Box
-          sx={{
-            height: "calc(100vh)",
-            backgroundImage:
-              'url("src/assets/backgrounds/Body_MeshGradient_2.svg")',
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "contain",
-          }}
-        >
-          <Section title="La GOT Âme" id="gotAme">
-            <GotAme></GotAme>
-          </Section>
-        </Box>
+        <Section title="(Se) Dépasser les obstacles" id="2">
+          <h3>Avec la GOT Âme : vous gagnez de l’expérience pratique</h3>+ tu
+          acquiers de la séniorité
+          <ul>
+            <li>pour trouver votre premier job</li>
+          </ul>
+          <li>pour valider votre reconversion</li>
+          <li> pour acquérir de nouvelles compétences</li>
+          <Box
+            sx={{
+              backgroundImage:
+                'url("src/assets/backgrounds/Body_MeshGradient_2.svg")',
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+              position: "absolute",
+              top: "50%",
+              right: "0%",
+              transform: "translateY(-50%)",
+              width: "300px",
+              height: "300px",
+            }}
+          />
+        </Section>
+        <Section title="La GOT Âme" id="gotAme">
+          <p>content of section here</p>
+        </Section>
         <Box
           display="flex"
           flexDirection="column"
           gap={"200px"}
           sx={{
-            background: "linear-gradient(0deg, #071520 30%, #0D2D45 90%)",
+            background: `linear-gradient(180deg, ${Colors.BLEU_NUIT} 30%, ${Colors.BLEU_OUTREMER} 90%)`,
           }}
         >
           <Section title="Projets en cours" id="projects">
