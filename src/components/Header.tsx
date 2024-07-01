@@ -1,17 +1,14 @@
 import Box from "@mui/material/Box";
 import { Colors } from "../core/colors";
 import Navbar from "./NavBar/Navbar";
-import { useLocation, useNavigate } from "react-router-dom";
 
 export default function Header() {
-  const location = useLocation();
-  const navigate = useNavigate();
 
   const handleClick = () => {
-    if (location.pathname === '/') {
+    if (window.location.href === '/') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
-      navigate('/');
+      window.location.href = '/';
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
