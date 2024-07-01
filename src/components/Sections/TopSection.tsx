@@ -74,7 +74,7 @@ const TitleAndLogo = () => {
         flexDirection: 'row',
         alignItems: 'center',
         gap: '59px',
-        paddingTop: '90px',
+        paddingTop: '60px',
       }}
     >
       <Box component="img" src="src/assets/logos/LOGO_TxtBlc_158px.png" />
