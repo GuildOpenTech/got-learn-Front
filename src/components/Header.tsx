@@ -29,7 +29,7 @@ export default function Header() {
     >
       <img
         onClick={handleClick}
-        src="/src/assets/LOGO_TxtBlc_99px.png"
+        src="/src/assets/LOGO_TxtBlc_99px_desvg.webp"
         alt="Logo Guild Open Tech"
         style={{
           width: '99px',
